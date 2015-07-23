@@ -1,0 +1,12 @@
+---
+title: "Radical Graph Databases"
+author: "Matthew Lincoln"
+date: "July 23, 2015"
+output: html_document
+---
+
+What if we could build a radical graph database?
+
+```{r census_view}
+
+```
