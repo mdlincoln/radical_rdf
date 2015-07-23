@@ -1,0 +1,8 @@
+digraph {
+  # Node definitions
+  a [label = 'Springfield']
+  b [label = 'Majority African-American']
+
+  # edge definitions
+  a -> b [label = "Has race"]
+}
