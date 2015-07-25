@@ -1,0 +1,41 @@
+digraph perspective {
+
+  graph [layout = neato, overlap = FALSE]
+
+  # Node Definitions
+  node [color = gray, fontname = Helvetica, fontsize = 6, shape = oval, overlap = FALSE]
+  spring [label = "Springfield"]
+  miriam [label = "Miriam"]
+  audrey [label = "Audrey"]
+  springblack [label = "Springfield:Black"]
+  springhaitian [label = "Springfield:Haitian"]
+  park [label = "Park"]
+  springkorean [label = "Springfield:Korean"]
+  black [label = "Black"]
+  haitian [label = "Haitian"]
+  korean [label = "Korean"]
+  racecat [label = "Racial Category"]
+  person [label = "Person"]
+  neigh [label = "Neighborhood"]
+  conrace [label = "Constructed Race"]
+
+
+  # Edge Definitions
+  edge [fontsize = 4, color = gray, fontname = Helvetica, labelfloat = TRUE, splines = curved]
+
+  spring -> springblack [label = "has_perceived_race"]
+  miriam -> springblack [label = "perceives_race"]
+  spring -> springhaitian [label = "has_perceived_race"]
+  audrey -> springhaitian [label = "perceives_race"]
+  spring -> springkorean [label = "has_perceived_race"]
+  park -> springkorean [label = "perceives_race"]
+  spring -> springblack [label = "has_perceived_race"]
+  park -> springblack [label = "perceives_race"]
+  springblack -> black [label = "is_instance_of"]
+  springhaitian -> haitian [label = "is_instance_of"]
+  springkorean -> korean [label = "is_instance_of"]
+  {miriam audrey park} -> person [label = "is_instance_of"]
+  {black haitian korean} -> racecat [label = "is_instance_of"]
+  {springblack springhaitian springkorean} -> conrace [label = "is_instance_of"]
+  spring -> neigh [label = "is_instance_of"]
+}

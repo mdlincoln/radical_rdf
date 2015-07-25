@@ -1,0 +1,25 @@
+digraph {
+
+  graph [layout = neato]
+
+  node [color = gray, fontsize = 8, fontname = Helvetica, shape = ellipse]
+  spring [label = "Springfield"]
+  prop1 [label = "prop1"]
+  prop2 [label = "prop2"]
+  prop3 [label = "prop3"]
+  per1 [label = "62%"]
+  per2 [label = "23%"]
+  per3 [label = "15%"]
+  afam [label = "African-American"]
+  asian [label = "Asian"]
+  caucasian [label = "Caucasian"]
+
+  edge [color = gray, fontsize = 6, fontname = Helvetica]
+  spring -> {prop1 prop2 prop3} [label = "has_racial_proportion"]
+  prop1 -> per1 [label = "percentage"]
+  prop1 -> afam [label = "race"]
+  prop2 -> per2 [label = "percentage"]
+  prop2 -> asian [label = "race"]
+  prop3 -> per3 [label = "percentage"]
+  prop3 -> caucasian [label = "race"]
+}

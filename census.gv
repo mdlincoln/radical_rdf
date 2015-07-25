@@ -1,8 +1,14 @@
-digraph {
+digraph census {
+
+  graph [layout = circo]
+
   # Node definitions
-  a [label = 'Springfield']
-  b [label = 'Majority African-American']
+  node [color = gray, fontname = Helvetica]
+
+  spring [label = 'Springfield', ]
+  afam [label = 'African-American']
 
   # edge definitions
-  a -> b [label = "Has race"]
+  edge [color = gray, fontname = Helvetica, fontsize = 10, labelloc = c]
+  spring -> afam [label = "has_race"]
 }

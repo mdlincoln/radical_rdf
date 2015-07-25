@@ -1,0 +1,30 @@
+digraph perspective {
+
+  graph [layout = neato, overlap = FALSE]
+
+  # Node Definitions
+  node [color = Cornsilk, color = gray, fontname = Helvetica, fontsize = 8]
+  spring [label = 'Springfield']
+
+  node [color = DarkSlateBlue]
+  miriam [label = 'Miriam']
+  audrey [label = 'Audrey']
+  park [label = 'Park']
+
+  node [color = DarkSeaGreen]
+  black [label = 'Black']
+  haitian [label = 'Haitian']
+  korean [label = 'Korean']
+
+  # Edge Definitions
+  edge [fontsize = 6, color = gray, fontname = Helvetica]
+
+  spring -> black [label = 'has_perceived_race']
+  miriam -> black [label = 'perceives_race']
+  spring -> haitian [label = 'has_perceived_race']
+  audrey -> haitian [label = 'perceives_race']
+  spring -> korean [label = 'has_perceived_race']
+  park -> korean [label = 'perceives_race']
+  spring -> black [label = 'has_perceived_race']
+  park -> black [label = 'perceives_race']
+}
